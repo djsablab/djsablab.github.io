@@ -1,1 +1,0 @@
-djsablab.github.io/privacy/index.html
