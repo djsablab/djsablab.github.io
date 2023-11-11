@@ -500,7 +500,8 @@ display:flex }
 .site-header {
 position:relative;padding:24px 0 }
 .site-header-inner {
-position:relative;display:flex;justify-content:space-between;align-items:center }
+position:relative;display:flex;justify-content:space-between;align-items:center;
+flex-wrap:wrap }
 .header-links {
 display:inline-flex }
 .header-links li {
@@ -552,7 +553,7 @@ padding:12px;
 max-width:400px }
 .feature-header {
 display:flex;align-items:center }
-@media (min-width: 641px) {
+@media (min-width: 1px) {
 .feature {
 padding-top:24px;padding-bottom:24px }
 .is-boxed {
