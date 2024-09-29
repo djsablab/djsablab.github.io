@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="js"><head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJ SABLAB - Privacy Policy</title>
+<link rel="icon" type="image/x-icon" href="../src/imgs/little.ico">
+<link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600" rel="stylesheet">
+<link rel="stylesheet" href="../src/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://unpkg.com/scrollreveal@4.0.0/../src/scrollreveal.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css"/>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/languages/javascript.min.js"></script>
+<link rel="stylesheet"href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"/>
+</script>
+</head>
+
+<body class="is-boxed">
+
+    <header class="site-header">
+    <div class="container">
+    <div class="site-header-inner">
+    <div class="brand header-brand" style="display: flex; flex-direction: row; align-content: center; justify-content: center; flex-wrap: wrap; align-items: center; margin-bottom: 8px;">
+    <a href="https://djsablab.github.io">
+    <img src="../src/imgs/logo.png" style="margin-top: 8px; width:60px; height:60px; border-radius:8px;">
+    </a><h1 class="hero-title mt-0 is-revealing" style="margin-left: 12px; margin-top: 8px;">DJ SABLAB</h1>
+    </div>
+    <div class="sidenav-header">
+    <label class="fancy-checkbox">
+    <input type="checkbox" id="theme-switch">
+    <i class="fa fa-fw fa-moon fa-2xl unchecked" style="color:white"></i>
+    <i class="fa fa-fw fa-sun fa-2xl checked" style="color:black"></i>
+    </label>
+    </div>
+    <div id="mySidenav" class="sidenav" style="width: 0%;">
+    </div>
+    </div>
+    </div>
+    
+    </header>
+    <div class="body-wrap boxed-container">
+    
+    <main>
+    <section class="hero">
+    <div class="container">
+    <div class="hero-inner">
+    <div class="hero-copyy">
+    <h1 class="hero-title mt-0 is-revealing">Welcome to my privacy and policies...</h1>
+    <p class="hero-paragraph is-revealing">My mission is always making apps available for everyone who has an access to the internet to let their experince better. I'm offering transparent-privacy for everyone. To really show my transparent-privacy, I'm now showing my source code below the page for the cookie usage:<br>
+    </p>
+    <pre class="pree"><code class="language-javascript">
+    const themeSwitch = document.querySelector('#theme-switch');
+     themeSwitch.addEventListener('change', () => {
+        if(themeSwitch.checked) {
+              document.documentElement.setAttribute('data-theme', 'light');
+              document.cookie = "darkmode=true; expires=Thu, 14 Jan 2038 23:59:00 UTC; path=/";
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.cookie = "darkmode=false; expires=Thu, 14 Jan 2038 23:59:00 UTC ;path=/";
+         }
+     });
+        </code></pre>
+
+        <p class="hero-paragraph is-revealing">This javascript code allows us to drop cookies on your device to store the information about using dark or light mode. And another source code allows us to apply the theme when user re-visited my website:</p>
+        <pre class="pree"><code class="language-javascript">
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                  let c = ca[i];
+                  while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                  }
+                  if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                  }
+                }
+                return "";
+              }
+            
+         function checkCookie() {
+          let modee = getCookie("darkmode");
+         if (modee == "true") {
+              document.documentElement.setAttribute('data-theme', 'light');
+              themeSwitch.checked =true;
+        } else {
+                   
+              document.documentElement.setAttribute('data-theme', 'dark');
+              themeSwitch.checked =false;
+            }
+        }
+        checkCookie();
+        </code></pre>
+        <p class="hero-paragraph is-revealing">Again, my website which based on "Github Pages" is completely static websites. You can view my source code of my website under my github profile. I do NOT collect, store, sell, share, analyze any information and other from user. (documents, pictures,videos etc...)
+        <br>My website is only capable to let you to interact and access my apps directly from my website. However, third party integrations such as Youtube Embedded Video Player and other additions - which makes my website functional - may collect datas about you. Please check their privacy and policies. I'm NOT affiliated with them. Important note, this privacy and policy is only for this website. It may differ depending the app.
+   <br> <br> --- STOP PRIVACY INVASION TOGETHER ---
+    </p>
+        <p class="hero-paragraph is-revealing"></p>
+</div></div></div>
+    
+    </section>
+    
+    
+    
+    </main>
+    <footer class="site-footer">
+    <div class="container">
+    <div class="site-footer-inner has-top-divider">
+    <div class="footer-copyright" style=" padding-top: 8px; font-size: 16px;">© 2024 All rights reserved. Every code has output.</div>
+    <div style="margin-top: 8px;display: flex;align-items: center;justify-content: center;align-content: center;flex-wrap: nowrap;width:100%;">
+    <a style="margin:4px" href="https://djsablab.github.io/">Go back to home</a><a style="margin:4px" href="https://djsablab.github.io/terms">Terms of Use</a>
+    </div></div> </div> </footer> </div>
+    
+    <script src="../src/js/main.min.js"></script> </body></html>
