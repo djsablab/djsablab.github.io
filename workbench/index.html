@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>DJ's Workbench</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
+
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-40 bg-black/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
+      <img src="./res/img/logo.png" alt="DJ's Workbench Logo" class="w-10 h-10 rounded-full" />
+      <span class="font-semibold text-lg">
+        DJ's Workbench
+      </span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="px-4 py-14 text-center">
+    <h1 class="text-3xl sm:text-4xl font-semibold mb-3">
+      Welcome to DJ's Workbench
+    </h1>
+    <p class="text-zinc-400 max-w-xl mx-auto">
+      Officially, this is a place where my apps can be downloaded peacefully.
+    </p>
+  </section>
+
+  <!-- App Grid -->
+  <section class="flex-1 max-w-6xl mx-auto px-4 pb-12">
+    <h2 class="text-xl font-semibold mb-4">
+      All apps
+    </h2>
+
+    <div id="apps" class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-6 text-center text-sm text-zinc-500">
+    © 2026 DJ's Workbench. All rights reserved. [WIP]
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

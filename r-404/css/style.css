@@ -1,0 +1,108 @@
+:root {
+      --ripple-light: rgba(0, 0, 0, 0.15);
+      --ripple-dark: rgba(255, 255, 255, 0.45);
+    }
+
+
+    html:not(.dark) .chip {
+      background-color: #FFFFFF;
+      color: #1C1C1C;
+      border-color: #E0E0E0;
+    }
+
+    html.dark .chip {
+      background-color: #1E1E1E;
+      color: #EDEDED;
+      border-color: #2C2C2C;
+    }
+
+    html:not(.dark) .chip:hover,
+    html.dark .chip:hover {
+      background-color: #b71c1c;
+      color: #FFFFFF;
+      border-color: #b71c1c;
+    }
+
+    /* Floating particles optimized */
+    .particle {
+      position: absolute;
+      border-radius: 9999px;
+      opacity: 0.6;
+      width: 80px;
+      height: 80px;
+      filter: blur(30px);
+      animation: float 14s ease-in-out infinite;
+    }
+
+    html:not(.dark) .particle {
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent 70%);
+    }
+
+    html.dark .particle {
+      background: radial-gradient(circle, rgba(96, 165, 250, 0.25), transparent 70%);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Ripple effect */
+    .ripple {
+      position: absolute;
+      border-radius: 9999px;
+      pointer-events: none;
+      transform: scale(0);
+      animation: ripple 600ms linear;
+    }
+
+    html:not(.dark) .ripple {
+      background-color: var(--ripple-light);
+    }
+
+    html.dark .ripple {
+      background-color: var(--ripple-dark);
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Gradient animation for headings */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradientShift 6s ease infinite;
+    }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

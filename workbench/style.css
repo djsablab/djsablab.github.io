@@ -1,0 +1,588 @@
+/* ================== RESET ================== */
+/* ================== PAGE LAYOUT FIX ================== */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0b0d10;
+  --surface: #14171c;
+  --surface-soft: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --text: #f2f4f8;
+  --muted: #9aa3b2;
+  --accent: #1db954;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================== TOPBAR ================== */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  width: 100%;;
+  z-index: 50;
+  padding: 0.5rem 0.25rem;
+  background: rgba(11,13,16,0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+}
+
+.topbar img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.8rem; 
+  border-radius: 50%;
+}
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.back {
+  font-size: 0.9rem;
+    letter-spacing: 0.2px;
+}
+
+/* ================== HERO ================== */
+
+.hero {
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  max-width: 720px;
+  margin: auto;
+  font-weight: 650;
+}
+
+.hero p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+}
+
+/* ================== LAYOUT ================== */
+
+.container {
+  max-width: 1200px;
+  display:flex;
+  flex-wrap:nowrap;
+  margin: auto;
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
+  padding: 2rem 1.5rem;
+    flex: 1;
+}
+
+/* ================== GRID ================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ================== APP CARD ================== */
+
+.app-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+}
+
+.app-title {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.app-desc {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ================== APP PAGE HEADER ================== */
+
+.app-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+}
+
+.big-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 24px;
+}
+
+.app-info p {
+  margin: 0.2rem 0;
+  color: var(--muted);
+}
+
+/* ================== STAR RATING ================== */
+
+.app-title-row {
+  margin-top: 0.4rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 24px;
+  color: #f5c451; /* soft gold */
+  opacity: 1;
+}
+
+.stars .count {
+  color: var(--muted);
+  font-size: 24px;
+  margin-left: 4px;
+}
+
+/* ================== BUTTONS ================== */
+
+a {
+  font-family: inherit;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.app-info a.button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+  background-color: #4da3ff;
+  border-radius: -1%;
+    border: 1px solid var(--border);
+}
+
+.app-info a:hover {
+  transform: translateY(-1px);
+}
+
+#install {
+  background: var(--accent);
+  color: black;
+  font-weight: 600;
+}
+
+.button2 {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+    background-color: #4a4c4e;
+  border-radius: -1%;
+}
+
+/* ================== SCREENSHOTS ================== */
+
+.screenshots-wrapper {
+  position: relative;
+}
+
+.screenshots {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  z-index: 1;
+}
+
+.screenshots img {
+  border-radius: 18px;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.screenshots img:hover {
+  transform: scale(1.03);
+}
+
+/* ================== SCREENSHOT ARROWS ================== */
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(20, 23, 28, 0.9);
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav.left {
+  left: -12px;
+}
+
+.nav.right {
+  right: -12px;
+}
+
+.nav:hover {
+  background: rgb(28 25 25 / 60%);
+}
+
+@media (min-width: 769px) {
+  .nav {
+    display: flex;
+  }
+}
+
+/* ================== MODAL ================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content,
+.modal img {
+  pointer-events: auto;
+}
+
+.modal img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 22px;
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================== MODAL ARROWS ================== */
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(20, 23, 28, 0.85);
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10001;
+  pointer-events: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-nav.left {
+  left: 24px;
+}
+
+.modal-nav.right {
+  right: 24px;
+}
+
+.modal-nav:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+@media (min-width: 769px) {
+  .modal-nav {
+    display: flex;
+  }
+}
+/* ================== MODAL CLOSE BUTTON ================== */
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: white;
+  cursor: pointer;
+
+  z-index: 10003;          /* ABOVE EVERYTHING */
+  pointer-events: auto;   /* FORCE CLICKABLE */
+
+  opacity: 0.75;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.modal .close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ================== FOOTER ================== */
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 700px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .screenshots img {
+    height: 220px;
+  }
+}
+
+/* ================== GALLERY DOTS ================== */
+
+.dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10002;
+  pointer-events: auto;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: 
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.35);
+}
+
+/* Slightly bigger & easier to tap on mobile */
+@media (max-width: 768px) {
+  .dot {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* ================= MODAL OVERLAY ================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 1000;
+}
+
+/* ================= MODAL CONTENT ================= */
+
+.modal-content {
+  background: #111;
+  border-radius: 14px;
+  padding: 20px;
+  width: 420px;
+  max-height: 70vh;
+  overflow-y: auto;
+
+  opacity: 0;
+  transform: scale(0.96) translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+/* ================= ACTIVE STATE ================= */
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal.active .modal-content {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ================= RELEASE STYLING ================= */
+
+.release {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #222;
+}
+
+.release-version {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+.release-title {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+/* ================= ASSET BUTTON ================= */
+
+.asset {
+  display: block;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  text-decoration: none;
+  color: #fff;
+
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.asset:hover {
+  background: #262626;
+  transform: translateY(-1px);
+}
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .modal,
+  .modal-content {
+    transition: none;
+  }
+}
+
+.release-version.latest {
+  color: #4caf50;
+}
+
+.release-version.latest::after {
+  content: " ✓ Latest";
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+#releaseList  {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.modal-title {
+  margin-bottom: 4px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.modal-subtitle {
+  margin-bottom: 16px !important;
+  color: var(--muted);
+}

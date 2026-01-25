@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Front-end developer portfolio with modern UI, dark mode, and smooth interactions." />
+  <title>Welcome to DJ's Portfolio</title>
+  <link rel="stylesheet" href="./res/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            accent: "#b71c1c",
+            gold: "#C9A24D",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-[#FAFAFA] dark:bg-[#121212] text-[#1C1C1C] dark:text-[#EDEDED]">
+
+  <main id="sections" class="h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
+    <!-- LANDING -->
+    <section id="landing"
+      class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden snap-start">
+      <!-- Particles -->
+      <div class="absolute inset-0 -z-10 pointer-events-none">
+        <span class="particle left-[20%] top-[30%]"></span>
+        <span class="particle left-[70%] top-[40%]"></span>
+        <span class="particle left-[40%] top-[70%]"></span>
+      </div>
+      <h1
+        class="text-5xl md:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-accent via-red-700 to-red-800 animate-gradient">
+        Hi, I'm DJ Sablab!
+      </h1>
+      <p class="text-lg md:text-xl text-[#616161] dark:text-[#9E9E9E] max-w-xl mb-10 text-wrap">
+        Welcome to my portfolio! I'm a front-end developer passionate about crafting beautiful, user-friendly web
+        experiences.
+      </p>
+      <div class="flex gap-4 flex-wrap justify-center">
+        <button data-target="about" type="button"
+          class="relative overflow-hidden px-8 py-4 ripple-btn rounded-xl bg-accent text-white font-semibold shadow-lg transform transition-transform hover:scale-105">
+          View My Work
+        </button>
+        <button id="dr-button" type="button"
+          class="relative overflow-hidden px-8 py-4 ripple-btn rounded-xl border border-accent dark:border-white font-semibold hover:scale-105 transition-transform">
+          Download Resume
+        </button>
+      </div>
+      <div class="absolute bottom-20 flex flex-col items-center text-gray-400 animate-bounce">
+        <span class="text-sm mb-1">Scroll</span>
+        <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 snap-start">
+      <h2 class="text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-700">
+        About Me
+      </h2>
+      <div class="max-w-5xl w-full flex flex-col gap-10">
+        <!-- Portrait + Description (Single Column) -->
+        <article class="flex flex-col items-center text-center">
+          <img src="./res/assets/pfp.png" alt="Portrait"
+            class="w-48 h-48 dark:border-[#EDEDED] mb-6" loading="lazy" />
+          <p class="text-[#616161] dark:text-[#9E9E9E] text-lg">
+            I’m a front-end developer focused on clean UI, accessibility, and
+            smooth interactions.
+          </p>
+          <div class="mt-4">
+            <h3 class="text-2xl font-semibold mb-4">Skills</h3>
+            <ul id="skills-container" class="flex flex-wrap gap-3 justify-center"></ul>
+          </div>
+        </article>
+        <!-- Projects -->
+        <section aria-labelledby="projects-heading">
+          <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+          <div id="projects" class="grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1 gap-6"></div>
+        </section>
+      </div>
+    </section>
+
+
+    <!-- CONTACT + FOOTER -->
+    <section id="contact"
+      class="bg-[#FAFAFA] dark:bg-[#121212] text-[#1C1C1C] dark:text-[#EDEDED] max-w-5xl mx-auto px-6 pt-0.5 snap-start">
+      <footer role="contentinfo"
+        class="relative mt-12 border-t border-white/20 dark:border-white/10 bg-white/70 dark:bg-[#1f1f1e]/70 backdrop-blur-xl">
+        <div class="max-w-5xl mx-auto px-6 py-16 grid gap-14 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+          <!-- Brand / Description -->
+          <section aria-labelledby="footer-brand">
+            <h2 id="footer-brand" class="text-xl font-bold text-accent mb-3">
+              DJ Sablab
+            </h2>
+            <p class="text-sm text-[#616161] dark:text-[#9E9E9E] leading-relaxed max-w-sm">
+              Front-end developer focused on accessible, performant, and
+              visually refined web experiences.
+            </p>
+          </section>
+          <!-- Navigation Links -->
+          <nav aria-labelledby="footer-nav">
+            <h2 id="footer-nav" class="text-sm font-semibold uppercase tracking-wide mb-4">
+              Navigation
+            </h2>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a data-target="landing" class="footer-link inline-flex items-center gap-2" href="#">
+                  <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a data-target="about" class="footer-link inline-flex items-center gap-2" href="#about">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                  About
+                </a>
+              </li>
+              <li>
+                <a data-target="projects" class="footer-link inline-flex items-center gap-2" href="#projects">
+                  <ion-icon name="folder-outline" aria-hidden="true"></ion-icon>
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a data-target="contact" target="_blank" class="footer-link inline-flex items-center gap-2"
+                  href="https://djsablab.github.io/resume">
+                  <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                  Download Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Projects -->
+          <section aria-labelledby="footer-projects">
+            <h2 id="footer-projects" class="text-sm font-semibold uppercase tracking-wide mb-4">
+              Projects
+            </h2>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="https://github.com/djsablab/TideTasks" target="_blank"
+                  class="footer-link inline-flex items-center gap-2">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  Tide Tasks
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/djsablab/WorldCountriesData" target="_blank"
+                  class="footer-link inline-flex items-center gap-2">
+                  <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+                  World Countries Data
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/djsablab/rn-hotel" target="_blank"
+                  class="footer-link inline-flex items-center gap-2">
+                  <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
+                  RN Hotel
+                </a>
+              </li>
+              <li>
+                <a href="https://djsablab.github.io/workbench" target="_blank"
+                  class="footer-link inline-flex items-center gap-2">
+                  <ion-icon name="storefront-outline" aria-hidden="true"></ion-icon>
+                  DJ's Workbench
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Contact / Social -->
+          <section aria-labelledby="footer-connect">
+            <h2 id="footer-connect" class="text-sm font-semibold uppercase tracking-wide mb-4">
+              Follow Me
+            </h2>
+
+            <div class="flex items-center gap-5 text-2xl mb-6">
+              <a href="https://djsablab.github.io/links/github" target="_blank" aria-label="GitHub profile"
+                class="footer-icon">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <a href="https://djsablab.github.io/links/linkedin" target="_blank" aria-label="LinkedIn profile"
+                class="footer-icon">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+              <a href="https://djsablab.github.io/links/youtube" target="_blank" aria-label="Youtube profile"
+                class="footer-icon">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/20 dark:border-white/10 max-sm:pb-16">
+          <div
+            class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#616161] dark:text-[#9E9E9E]">
+            <span>© 2026 DJ Sablab. All rights reserved. [WIP]</span>
+
+            <button data-target="landing" class="inline-flex items-center gap-2 footer-link">
+              Back to top
+              <ion-icon name="arrow-up-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+
+  <!-- NAVBAR -->
+  <nav
+    class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white/90 dark:bg-[#1E1E1E]/90 backdrop-blur-lg shadow-xl rounded-xl px-6 py-3 z-50">
+    <ul class="flex items-center gap-6">
+      <li>
+        <button data-target="landing" type="button" aria-label="Home">
+          <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+        </button>
+      </li>
+      <li>
+        <button data-target="about" type="button" aria-label="About">
+          <ion-icon name="person-outline" class="text-2xl"></ion-icon>
+        </button>
+      </li>
+      <li>
+        <button data-target="contact" type="button" aria-label="Contact">
+          <ion-icon name="call-outline" class="text-2xl"></ion-icon>
+        </button>
+      </li>
+      <li class="pl-2 border-l border-gray-300 dark:border-[#2C2C2C]">
+        <button id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+          <ion-icon id="themeIcon" class="text-2xl"></ion-icon>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- SCRIPTS -->
+  <script src="./res/js/main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
