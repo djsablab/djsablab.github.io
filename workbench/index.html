@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <title>DJ's Workbench</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../res/assets/wb-logo.png"/>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,12 +14,24 @@
 <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
 
   <!-- Top Bar -->
-  <header class="sticky top-0 z-40 bg-black/70 backdrop-blur border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
-      <img src="./res/img/logo.png" alt="DJ's Workbench Logo" class="w-10 h-10 rounded-full" />
-      <span class="font-semibold text-lg">
-        DJ's Workbench
-      </span>
+  <header class="z-40 bg-black/70 backdrop-blur border-b border-white/10 flex flex-row flex-wrap justify-around">
+    <div class="max-w-6xl  px-4 py-3 flex items-center gap-3">
+      <a href="https://djsablab.github.io/workbench" class="flex items-center gap-3">
+        <img src="../res/assets/wb-logo.png" alt="DJ's Workbench Logo" class="w-7 h-7" />
+        <span class="font-semibold text-lg">
+          DJ's Workbench
+        </span></a>
+    </div>
+    <div class="border-t border-white/10 flex justify-center max-w-6xl px-4 py-3 flex items-center gap-3 flex-wrap">
+      <a href="https://djsablab.github.io" class="block font-medium hover:underline flex items-center gap-1">
+        <ion-icon name="home-outline"></ion-icon>Home
+      </a>
+      <a href="https://djsablab.github.io/workbench/about" target="_blank" class="block font-medium hover:underline flex items-center gap-1">
+        <ion-icon name="help-outline"></ion-icon>About
+      </a>
+      <a href="https://djsablab.github.io/links" target="_blank" class="block font-medium hover:underline flex items-center gap-1">
+        <ion-icon name="call-outline"></ion-icon>Contact
+      </a>
     </div>
   </header>
 
@@ -38,15 +51,17 @@
       All apps
     </h2>
 
-    <div id="apps" class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+    <div id="apps" class="grid gap-4 grid-cols-1"></div>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-white/10 py-6 text-center text-sm text-zinc-500">
-    © 2026 DJ's Workbench. All rights reserved. [WIP]
+    © 2026 DJ's Workbench. All rights reserved.
   </footer>
 
-  <script src="app.js"></script>
+  <script src="../res/js/workbench.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

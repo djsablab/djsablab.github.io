@@ -69,8 +69,6 @@
       <div class="max-w-5xl w-full flex flex-col gap-10">
         <!-- Portrait + Description (Single Column) -->
         <article class="flex flex-col items-center text-center">
-          <img src="./res/assets/pfp.png" alt="Portrait"
-            class="w-48 h-48 dark:border-[#EDEDED] mb-6" loading="lazy" />
           <p class="text-[#616161] dark:text-[#9E9E9E] text-lg">
             I’m a front-end developer focused on clean UI, accessibility, and
             smooth interactions.
@@ -88,13 +86,137 @@
       </div>
     </section>
 
+    <!-- DJ'S WORKBENCH -->
+<section id="features" class="min-h-screen flex items-center px-6 py-20 snap-start">
+  <div class="mx-auto max-w-7xl w-full">
+
+    <!-- Header -->
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-sm font-semibold tracking-wide text-accent uppercase">
+        DJ's Workbench
+      </h2>
+      <p
+        class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1C1C1C] dark:text-white">
+        Tools & principles I build with
+      </p>
+      <p
+        class="mt-6 text-lg text-[#616161] dark:text-[#9E9E9E]">
+        A snapshot of the technologies and practices I use to create fast,
+        accessible, and maintainable front-end applications.
+      </p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <!-- Card -->
+      <div
+        class="group rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl p-6 border border-black/5 dark:border-white/10 hover:-translate-y-1 transition">
+        <div
+          class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+          <ion-icon name="logo-react" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1C1C1C] dark:text-white">
+          React & React Native
+        </h3>
+        <p class="mt-2 text-sm text-[#616161] dark:text-[#9E9E9E]">
+          Building reusable components and scalable UI systems for web and
+          mobile using modern React patterns.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="group rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl p-6 border border-black/5 dark:border-white/10 hover:-translate-y-1 transition">
+        <div
+          class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+          <ion-icon name="color-palette-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1C1C1C] dark:text-white">
+          Tailwind & UI Polish
+        </h3>
+        <p class="mt-2 text-sm text-[#616161] dark:text-[#9E9E9E]">
+          Rapid styling with consistent spacing, motion, and dark-mode support
+          baked in from day one.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="group rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl p-6 border border-black/5 dark:border-white/10 hover:-translate-y-1 transition">
+        <div
+          class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+          <ion-icon name="layers-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1C1C1C] dark:text-white">
+          State Management
+        </h3>
+        <p class="mt-2 text-sm text-[#616161] dark:text-[#9E9E9E]">
+          Predictable state using Redux Toolkit, context, and clean data flow
+          patterns.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="group rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl p-6 border border-black/5 dark:border-white/10 hover:-translate-y-1 transition">
+        <div
+          class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+          <ion-icon name="flash-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1C1C1C] dark:text-white">
+          Performance-first
+        </h3>
+        <p class="mt-2 text-sm text-[#616161] dark:text-[#9E9E9E]">
+          Optimized rendering, asset loading, and interaction timing so apps
+          feel smooth and responsive.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="group rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl p-6 border border-black/5 dark:border-white/10 hover:-translate-y-1 transition">
+        <div
+          class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+          <ion-icon name="shield-checkmark-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1C1C1C] dark:text-white">
+          Accessibility
+        </h3>
+        <p class="mt-2 text-sm text-[#616161] dark:text-[#9E9E9E]">
+          Semantic HTML, keyboard navigation, and contrast-safe UI to make apps
+          usable for everyone.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div
+        class="group rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl p-6 border border-black/5 dark:border-white/10 hover:-translate-y-1 transition">
+        <div
+          class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+          <ion-icon name="rocket-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1C1C1C] dark:text-white">
+          Modern Tooling
+        </h3>
+        <p class="mt-2 text-sm text-[#616161] dark:text-[#9E9E9E]">
+          Vite, Expo, Firebase, and modern workflows that keep development fast
+          and scalable.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- CONTACT + FOOTER -->
     <section id="contact"
-      class="bg-[#FAFAFA] dark:bg-[#121212] text-[#1C1C1C] dark:text-[#EDEDED] max-w-5xl mx-auto px-6 pt-0.5 snap-start">
+      class="bg-[#FAFAFA] dark:bg-[#121212] text-[#1C1C1C] dark:text-[#EDEDED] container mx-auto px-6 pt-0.5 snap-start">
       <footer role="contentinfo"
-        class="relative mt-12 border-t border-white/20 dark:border-white/10 bg-white/70 dark:bg-[#1f1f1e]/70 backdrop-blur-xl">
-        <div class="max-w-5xl mx-auto px-6 py-16 grid gap-14 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+        class="relative mt-12 border-t border-white/20 dark:border-white/10 bg-white/70 dark:bg-[#1f1f1e]/0 backdrop-blur-xl">
+        <div class="container mx-auto px-6 py-16 grid gap-14 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
           <!-- Brand / Description -->
           <section aria-labelledby="footer-brand">
             <h2 id="footer-brand" class="text-xl font-bold text-accent mb-3">
@@ -127,6 +249,12 @@
                 <a data-target="projects" class="footer-link inline-flex items-center gap-2" href="#projects">
                   <ion-icon name="folder-outline" aria-hidden="true"></ion-icon>
                   Projects
+                </a>
+              </li>
+                            <li>
+                <a data-target="projects" class="footer-link inline-flex items-center gap-2" href="#features">
+                  <ion-icon name="folder-outline" aria-hidden="true"></ion-icon>
+                  Features
                 </a>
               </li>
               <li>
@@ -203,7 +331,7 @@
         <div class="border-t border-white/20 dark:border-white/10 max-sm:pb-16">
           <div
             class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#616161] dark:text-[#9E9E9E]">
-            <span>© 2026 DJ Sablab. All rights reserved. [WIP]</span>
+            <span>© 2026 DJ Sablab. All rights reserved.</span>
 
             <button data-target="landing" class="inline-flex items-center gap-2 footer-link">
               Back to top
@@ -231,8 +359,8 @@
         </button>
       </li>
       <li>
-        <button data-target="contact" type="button" aria-label="Contact">
-          <ion-icon name="call-outline" class="text-2xl"></ion-icon>
+        <button data-target="features" type="button" aria-label="Contact">
+          <ion-icon name="code-slash-outline" class="text-2xl"></ion-icon>
         </button>
       </li>
       <li class="pl-2 border-l border-gray-300 dark:border-[#2C2C2C]">

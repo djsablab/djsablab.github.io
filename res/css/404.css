@@ -3,23 +3,6 @@
   --ripple-dark: rgba(255, 255, 255, 0.45);
 }
 
-nav ul li {
-  height: 24px;
-}
-
-/* Chip styles */
-.chip {
-  cursor: default;
-  transition: all 0.3s ease;
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin: 0.125rem;
-  border: 1px solid;
-}
-
 html:not(.dark) .chip {
   background-color: #ffffff;
   color: #1c1c1c;
@@ -37,18 +20,6 @@ html.dark .chip:hover {
   background-color: #b71c1c;
   color: #ffffff;
   border-color: #b71c1c;
-}
-
-/* Project card glow */
-.project-card {
-  transition: all 0.3s ease;
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.project-card:hover {
-  box-shadow: 0 8px 30px rgba(183, 28, 28, 0.4);
-  transform: translateY(-5px);
 }
 
 /* Floating particles optimized */
@@ -137,65 +108,4 @@ html.dark .ripple {
     animation: none !important;
     transition: none !important;
   }
-}
-/* Footer link and icon hover/focus effects */
-.footer-link {
-  display: inline-block;
-  padding: 0.25rem 0;
-  transition: color 0.2s ease;
-}
-
-.footer-link:hover {
-  color: #b71c1c;
-}
-
-.footer-link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #b71c1c;
-  border-radius: 0.25rem;
-}
-
-.footer-icon {
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
-}
-
-.footer-icon:hover {
-  color: #b71c1c;
-  transform: translateY(-2px);
-}
-
-.footer-icon:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #b71c1c;
-  border-radius: 9999px;
-}
-
-html {
-  color-scheme: dark;
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #555 #1e1e1e;
-}
-
-/* Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #777;
 }

@@ -67,7 +67,7 @@ const projectsData = [
       "World Countries Data is an HTML; CSS and JavaScript based, semi-responsive website powered with REST Countries API",
     url: "https://github.com/djsablab/WorldCountriesData",
     image: "./res/assets/wcd-preview.png",
-    tech: ["HTML", "CSS", "JavaScript", "API"],
+    tech: ["HTML", "CSS", "JavaScript", "API", "REST"],
   },
   {
     title: "RN Hotel",
@@ -82,11 +82,11 @@ const projectsData = [
 const projectsContainer = document.getElementById("projects");
 projectsData.forEach((proj) => {
   const card = document.createElement("div");
-  card.className = "project-card bg-white dark:bg-[#1E1E1E] p-4";
+  card.className = "project-card bg-white dark:bg-[#1E1E1E] p-4 flex flex-col items-end rounded-xl shadow-md hover:scale-105 transition-transform";
   card.innerHTML = `
         <img src="${proj.image}" alt="${proj.title}" class="rounded-xl mb-4 w-full h-48 object-contain">
-        <h3 class="text-xl font-bold mb-2">${proj.title}</h3>
-        <p class="text-[#616161] dark:text-[#9E9E9E] mb-2">${proj.description}</p>
+        <h3 class="text-xl font-bold mb-2 w-full text-left">${proj.title}</h3>
+        <p class="text-[#616161] dark:text-[#9E9E9E] mb-2 h-full">${proj.description}</p>
         <div class="flex flex-wrap gap-2 mb-4">
           ${proj.tech.map((tech) => `<span class="chip">${tech}</span>`).join("")}
         </div>
